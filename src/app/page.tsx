@@ -1,4 +1,3 @@
-// app/page.tsx
 'use client'
 import { SignedIn } from '@clerk/nextjs'
 import { NegotiationForm } from '@/components/NegotiationForm'
@@ -14,11 +13,19 @@ export default function Home() {
     try {
       setLoading(true)
       setError('')
+      console.log('Submitting data:', data)
+      
       const res = await axios.post('/api/ai-suggest', data)
-      setSuggestion(res.data)
+      console.log('API Response:', res.data)
+      
+      // Store the result in localStorage
+      localStorage.setItem('negotiationResult', JSON.stringify(res.data))
+      
+      // Navigate to results page
+      window.location.href = '/results'
     } catch (err: any) {
-      setError(err.response?.data?.error || 'Failed to generate suggestion')
-    } finally {
+      console.error('Error:', err)
+      setError(err.response?.data?.error || err.message || 'An error occurred')
       setLoading(false)
     }
   }
@@ -29,11 +36,15 @@ export default function Home() {
         <h1 className="text-2xl font-bold mb-4">AI-Powered Negotiation Assistant</h1>
         <NegotiationForm onSubmit={handleSubmit} />
         
-        {loading && <p className="mt-4 text-blue-600">Generating suggestions...</p>}
+        {loading && (
+          <div className="mt-4 p-4 bg-blue-100 text-blue-700 rounded">
+            <p>Generating suggestions...</p>
+          </div>
+        )}
         
         {error && (
           <div className="mt-4 p-4 bg-red-100 text-red-700 rounded">
-            Error: {error}
+            <p>Error: {error}</p>
           </div>
         )}
 
@@ -41,7 +52,7 @@ export default function Home() {
           <div className="mt-4 bg-gray-50 p-4 rounded">
             <h2 className="text-xl font-semibold mb-2">Suggested Counter-Offer</h2>
             <pre className="whitespace-pre-wrap">
-              {suggestion.choices[0].message.content}
+              {suggestion.choices?.[0]?.message?.content || JSON.stringify(suggestion, null, 2)}
             </pre>
           </div>
         )}

@@ -1,0 +1,19 @@
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Negotiation {
+  id           String   @id @default(uuid())
+  userId       String
+  originalText String
+  counterOffer String
+  toneTips     String
+  createdAt    DateTime @default(now())
+}

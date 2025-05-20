@@ -1,10 +1,9 @@
-// components/negotiation-form.tsx
 'use client'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { negotiationFormSchema } from '@/lib/schema'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Button } from './ui/button'
+import { Button } from '@/components/ui/button'
 import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -14,7 +13,7 @@ export function NegotiationForm({ onSubmit }: { onSubmit: (data: z.infer<typeof 
     resolver: zodResolver(negotiationFormSchema),
     defaultValues: {
       domain: '',
-      experience: 0,
+      experience: '', 
       education: '',
       expectations: '',
       offerText: ''
@@ -42,9 +41,13 @@ export function NegotiationForm({ onSubmit }: { onSubmit: (data: z.infer<typeof 
           name="experience"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Years of Experience</FormLabel>
+              <FormLabel>Years of Experience (e.g., "3-5")</FormLabel>
               <FormControl>
-                <Input type="number" {...field} onChange={e => field.onChange(Number(e.target.value))} />
+                <Input 
+                  placeholder="3-5" 
+                  {...field} 
+                  onChange={e => field.onChange(e.target.value)} // Keep as string
+                />
               </FormControl>
             </FormItem>
           )}

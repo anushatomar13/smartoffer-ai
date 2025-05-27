@@ -6,7 +6,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <ClerkProvider>
       <html lang="en">
         <body>
-          <header className="w-full flex justify-end items-center px-6 py-4 fixed top-0 left-0 bg-transparent z-50">
+          <header className="w-full flex justify-end items-center bg-transparent fixed top-0 right-0 p-4 z-50">
             <SignedIn>
               <UserButton afterSignOutUrl="/" />
             </SignedIn>
@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <SignInButton />
             </SignedOut>
           </header>
-          <main className="pt-20">{children}</main>
+          <main>{children}</main>
         </body>
       </html>
     </ClerkProvider>

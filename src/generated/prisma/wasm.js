@@ -120,13 +120,13 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.NegotiationScalarFieldEnum = {
+exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
-  userId: 'userId',
-  originalText: 'originalText',
-  counterOffer: 'counterOffer',
-  toneTips: 'toneTips',
-  createdAt: 'createdAt'
+  clerkId: 'clerkId',
+  email: 'email',
+  name: 'name',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.SortOrder = {
@@ -139,9 +139,14 @@ exports.Prisma.QueryMode = {
   insensitive: 'insensitive'
 };
 
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
 
 exports.Prisma.ModelName = {
-  Negotiation: 'Negotiation'
+  User: 'User'
 };
 
 /**

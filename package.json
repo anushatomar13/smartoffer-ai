@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
+    "dev": "prisma generate && next dev",
+    "build": "prisma generate && next build",
+    "postinstall": "prisma generate",
     "start": "next start",
     "lint": "next lint"
   },
@@ -21,6 +22,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "form": "^0.2.5",
+    "framer-motion": "^12.15.0",
     "input": "^1.0.1",
     "lucide-react": "^0.511.0",
     "next": "15.3.2",
@@ -31,6 +33,7 @@
     "redis": "^5.1.0",
     "resend": "^4.5.1",
     "shadcn": "^2.5.0",
+    "svix": "^1.65.0",
     "tailwind-merge": "^3.3.0",
     "textarea": "^0.3.0",
     "zod": "^3.25.7"

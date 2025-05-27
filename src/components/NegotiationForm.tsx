@@ -46,7 +46,7 @@ export function NegotiationForm({ onSubmit }: { onSubmit: (data: z.infer<typeof 
                 <Input 
                   placeholder="3-5" 
                   {...field} 
-                  onChange={e => field.onChange(e.target.value)} // Keep as string
+                  onChange={e => field.onChange(e.target.value)}
                 />
               </FormControl>
             </FormItem>

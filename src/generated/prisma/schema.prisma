@@ -8,11 +8,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Negotiation {
-  id           String   @id @default(uuid())
-  userId       String
-  originalText String
-  counterOffer String
-  toneTips     String
-  createdAt    DateTime @default(now())
+model User {
+  id        String   @id @default(uuid())
+  clerkId   String   @unique
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

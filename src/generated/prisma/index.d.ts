@@ -14,10 +14,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model Negotiation
+ * Model User
  * 
  */
-export type Negotiation = $Result.DefaultSelection<Prisma.$NegotiationPayload>
+export type User = $Result.DefaultSelection<Prisma.$UserPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -26,8 +26,8 @@ export type Negotiation = $Result.DefaultSelection<Prisma.$NegotiationPayload>
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Negotiations
- * const negotiations = await prisma.negotiation.findMany()
+ * // Fetch zero or more Users
+ * const users = await prisma.user.findMany()
  * ```
  *
  *
@@ -47,8 +47,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more Negotiations
-   * const negotiations = await prisma.negotiation.findMany()
+   * // Fetch zero or more Users
+   * const users = await prisma.user.findMany()
    * ```
    *
    *
@@ -145,14 +145,14 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.negotiation`: Exposes CRUD operations for the **Negotiation** model.
+   * `prisma.user`: Exposes CRUD operations for the **User** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Negotiations
-    * const negotiations = await prisma.negotiation.findMany()
+    * // Fetch zero or more Users
+    * const users = await prisma.user.findMany()
     * ```
     */
-  get negotiation(): Prisma.NegotiationDelegate<ExtArgs, ClientOptions>;
+  get user(): Prisma.UserDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -593,7 +593,7 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    Negotiation: 'Negotiation'
+    User: 'User'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -612,81 +612,81 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "negotiation"
+      modelProps: "user"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      Negotiation: {
-        payload: Prisma.$NegotiationPayload<ExtArgs>
-        fields: Prisma.NegotiationFieldRefs
+      User: {
+        payload: Prisma.$UserPayload<ExtArgs>
+        fields: Prisma.UserFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.NegotiationFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NegotiationPayload> | null
+            args: Prisma.UserFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.NegotiationFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NegotiationPayload>
+            args: Prisma.UserFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           findFirst: {
-            args: Prisma.NegotiationFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NegotiationPayload> | null
+            args: Prisma.UserFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.NegotiationFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NegotiationPayload>
+            args: Prisma.UserFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           findMany: {
-            args: Prisma.NegotiationFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NegotiationPayload>[]
+            args: Prisma.UserFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
           }
           create: {
-            args: Prisma.NegotiationCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NegotiationPayload>
+            args: Prisma.UserCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           createMany: {
-            args: Prisma.NegotiationCreateManyArgs<ExtArgs>
+            args: Prisma.UserCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.NegotiationCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NegotiationPayload>[]
+            args: Prisma.UserCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
           }
           delete: {
-            args: Prisma.NegotiationDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NegotiationPayload>
+            args: Prisma.UserDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           update: {
-            args: Prisma.NegotiationUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NegotiationPayload>
+            args: Prisma.UserUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           deleteMany: {
-            args: Prisma.NegotiationDeleteManyArgs<ExtArgs>
+            args: Prisma.UserDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.NegotiationUpdateManyArgs<ExtArgs>
+            args: Prisma.UserUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.NegotiationUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NegotiationPayload>[]
+            args: Prisma.UserUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
           }
           upsert: {
-            args: Prisma.NegotiationUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NegotiationPayload>
+            args: Prisma.UserUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           aggregate: {
-            args: Prisma.NegotiationAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateNegotiation>
+            args: Prisma.UserAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateUser>
           }
           groupBy: {
-            args: Prisma.NegotiationGroupByArgs<ExtArgs>
-            result: $Utils.Optional<NegotiationGroupByOutputType>[]
+            args: Prisma.UserGroupByArgs<ExtArgs>
+            result: $Utils.Optional<UserGroupByOutputType>[]
           }
           count: {
-            args: Prisma.NegotiationCountArgs<ExtArgs>
-            result: $Utils.Optional<NegotiationCountAggregateOutputType> | number
+            args: Prisma.UserCountArgs<ExtArgs>
+            result: $Utils.Optional<UserCountAggregateOutputType> | number
           }
         }
       }
@@ -774,7 +774,7 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    negotiation?: NegotiationOmit
+    user?: UserOmit
   }
 
   /* Types for Logging */
@@ -870,348 +870,348 @@ export namespace Prisma {
    */
 
   /**
-   * Model Negotiation
+   * Model User
    */
 
-  export type AggregateNegotiation = {
-    _count: NegotiationCountAggregateOutputType | null
-    _min: NegotiationMinAggregateOutputType | null
-    _max: NegotiationMaxAggregateOutputType | null
+  export type AggregateUser = {
+    _count: UserCountAggregateOutputType | null
+    _min: UserMinAggregateOutputType | null
+    _max: UserMaxAggregateOutputType | null
   }
 
-  export type NegotiationMinAggregateOutputType = {
+  export type UserMinAggregateOutputType = {
     id: string | null
-    userId: string | null
-    originalText: string | null
-    counterOffer: string | null
-    toneTips: string | null
+    clerkId: string | null
+    email: string | null
+    name: string | null
     createdAt: Date | null
+    updatedAt: Date | null
   }
 
-  export type NegotiationMaxAggregateOutputType = {
+  export type UserMaxAggregateOutputType = {
     id: string | null
-    userId: string | null
-    originalText: string | null
-    counterOffer: string | null
-    toneTips: string | null
+    clerkId: string | null
+    email: string | null
+    name: string | null
     createdAt: Date | null
+    updatedAt: Date | null
   }
 
-  export type NegotiationCountAggregateOutputType = {
+  export type UserCountAggregateOutputType = {
     id: number
-    userId: number
-    originalText: number
-    counterOffer: number
-    toneTips: number
+    clerkId: number
+    email: number
+    name: number
     createdAt: number
+    updatedAt: number
     _all: number
   }
 
 
-  export type NegotiationMinAggregateInputType = {
+  export type UserMinAggregateInputType = {
     id?: true
-    userId?: true
-    originalText?: true
-    counterOffer?: true
-    toneTips?: true
+    clerkId?: true
+    email?: true
+    name?: true
     createdAt?: true
+    updatedAt?: true
   }
 
-  export type NegotiationMaxAggregateInputType = {
+  export type UserMaxAggregateInputType = {
     id?: true
-    userId?: true
-    originalText?: true
-    counterOffer?: true
-    toneTips?: true
+    clerkId?: true
+    email?: true
+    name?: true
     createdAt?: true
+    updatedAt?: true
   }
 
-  export type NegotiationCountAggregateInputType = {
+  export type UserCountAggregateInputType = {
     id?: true
-    userId?: true
-    originalText?: true
-    counterOffer?: true
-    toneTips?: true
+    clerkId?: true
+    email?: true
+    name?: true
     createdAt?: true
+    updatedAt?: true
     _all?: true
   }
 
-  export type NegotiationAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Negotiation to aggregate.
+     * Filter which User to aggregate.
      */
-    where?: NegotiationWhereInput
+    where?: UserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Negotiations to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: NegotiationOrderByWithRelationInput | NegotiationOrderByWithRelationInput[]
+    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: NegotiationWhereUniqueInput
+    cursor?: UserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Negotiations from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Negotiations.
+     * Skip the first `n` Users.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Negotiations
+     * Count returned Users
     **/
-    _count?: true | NegotiationCountAggregateInputType
+    _count?: true | UserCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: NegotiationMinAggregateInputType
+    _min?: UserMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: NegotiationMaxAggregateInputType
+    _max?: UserMaxAggregateInputType
   }
 
-  export type GetNegotiationAggregateType<T extends NegotiationAggregateArgs> = {
-        [P in keyof T & keyof AggregateNegotiation]: P extends '_count' | 'count'
+  export type GetUserAggregateType<T extends UserAggregateArgs> = {
+        [P in keyof T & keyof AggregateUser]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateNegotiation[P]>
-      : GetScalarType<T[P], AggregateNegotiation[P]>
+        : GetScalarType<T[P], AggregateUser[P]>
+      : GetScalarType<T[P], AggregateUser[P]>
   }
 
 
 
 
-  export type NegotiationGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: NegotiationWhereInput
-    orderBy?: NegotiationOrderByWithAggregationInput | NegotiationOrderByWithAggregationInput[]
-    by: NegotiationScalarFieldEnum[] | NegotiationScalarFieldEnum
-    having?: NegotiationScalarWhereWithAggregatesInput
+  export type UserGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserWhereInput
+    orderBy?: UserOrderByWithAggregationInput | UserOrderByWithAggregationInput[]
+    by: UserScalarFieldEnum[] | UserScalarFieldEnum
+    having?: UserScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: NegotiationCountAggregateInputType | true
-    _min?: NegotiationMinAggregateInputType
-    _max?: NegotiationMaxAggregateInputType
+    _count?: UserCountAggregateInputType | true
+    _min?: UserMinAggregateInputType
+    _max?: UserMaxAggregateInputType
   }
 
-  export type NegotiationGroupByOutputType = {
+  export type UserGroupByOutputType = {
     id: string
-    userId: string
-    originalText: string
-    counterOffer: string
-    toneTips: string
+    clerkId: string
+    email: string
+    name: string | null
     createdAt: Date
-    _count: NegotiationCountAggregateOutputType | null
-    _min: NegotiationMinAggregateOutputType | null
-    _max: NegotiationMaxAggregateOutputType | null
+    updatedAt: Date
+    _count: UserCountAggregateOutputType | null
+    _min: UserMinAggregateOutputType | null
+    _max: UserMaxAggregateOutputType | null
   }
 
-  type GetNegotiationGroupByPayload<T extends NegotiationGroupByArgs> = Prisma.PrismaPromise<
+  type GetUserGroupByPayload<T extends UserGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<NegotiationGroupByOutputType, T['by']> &
+      PickEnumerable<UserGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof NegotiationGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof UserGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], NegotiationGroupByOutputType[P]>
-            : GetScalarType<T[P], NegotiationGroupByOutputType[P]>
+              : GetScalarType<T[P], UserGroupByOutputType[P]>
+            : GetScalarType<T[P], UserGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type NegotiationSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type UserSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    userId?: boolean
-    originalText?: boolean
-    counterOffer?: boolean
-    toneTips?: boolean
+    clerkId?: boolean
+    email?: boolean
+    name?: boolean
     createdAt?: boolean
-  }, ExtArgs["result"]["negotiation"]>
+    updatedAt?: boolean
+  }, ExtArgs["result"]["user"]>
 
-  export type NegotiationSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type UserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    userId?: boolean
-    originalText?: boolean
-    counterOffer?: boolean
-    toneTips?: boolean
+    clerkId?: boolean
+    email?: boolean
+    name?: boolean
     createdAt?: boolean
-  }, ExtArgs["result"]["negotiation"]>
+    updatedAt?: boolean
+  }, ExtArgs["result"]["user"]>
 
-  export type NegotiationSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    userId?: boolean
-    originalText?: boolean
-    counterOffer?: boolean
-    toneTips?: boolean
+    clerkId?: boolean
+    email?: boolean
+    name?: boolean
     createdAt?: boolean
-  }, ExtArgs["result"]["negotiation"]>
+    updatedAt?: boolean
+  }, ExtArgs["result"]["user"]>
 
-  export type NegotiationSelectScalar = {
+  export type UserSelectScalar = {
     id?: boolean
-    userId?: boolean
-    originalText?: boolean
-    counterOffer?: boolean
-    toneTips?: boolean
+    clerkId?: boolean
+    email?: boolean
+    name?: boolean
     createdAt?: boolean
+    updatedAt?: boolean
   }
 
-  export type NegotiationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "originalText" | "counterOffer" | "toneTips" | "createdAt", ExtArgs["result"]["negotiation"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "clerkId" | "email" | "name" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
 
-  export type $NegotiationPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Negotiation"
+  export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "User"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
-      userId: string
-      originalText: string
-      counterOffer: string
-      toneTips: string
+      clerkId: string
+      email: string
+      name: string | null
       createdAt: Date
-    }, ExtArgs["result"]["negotiation"]>
+      updatedAt: Date
+    }, ExtArgs["result"]["user"]>
     composites: {}
   }
 
-  type NegotiationGetPayload<S extends boolean | null | undefined | NegotiationDefaultArgs> = $Result.GetResult<Prisma.$NegotiationPayload, S>
+  type UserGetPayload<S extends boolean | null | undefined | UserDefaultArgs> = $Result.GetResult<Prisma.$UserPayload, S>
 
-  type NegotiationCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<NegotiationFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: NegotiationCountAggregateInputType | true
+  type UserCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<UserFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: UserCountAggregateInputType | true
     }
 
-  export interface NegotiationDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Negotiation'], meta: { name: 'Negotiation' } }
+  export interface UserDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['User'], meta: { name: 'User' } }
     /**
-     * Find zero or one Negotiation that matches the filter.
-     * @param {NegotiationFindUniqueArgs} args - Arguments to find a Negotiation
+     * Find zero or one User that matches the filter.
+     * @param {UserFindUniqueArgs} args - Arguments to find a User
      * @example
-     * // Get one Negotiation
-     * const negotiation = await prisma.negotiation.findUnique({
+     * // Get one User
+     * const user = await prisma.user.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends NegotiationFindUniqueArgs>(args: SelectSubset<T, NegotiationFindUniqueArgs<ExtArgs>>): Prisma__NegotiationClient<$Result.GetResult<Prisma.$NegotiationPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends UserFindUniqueArgs>(args: SelectSubset<T, UserFindUniqueArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Negotiation that matches the filter or throw an error with `error.code='P2025'`
+     * Find one User that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {NegotiationFindUniqueOrThrowArgs} args - Arguments to find a Negotiation
+     * @param {UserFindUniqueOrThrowArgs} args - Arguments to find a User
      * @example
-     * // Get one Negotiation
-     * const negotiation = await prisma.negotiation.findUniqueOrThrow({
+     * // Get one User
+     * const user = await prisma.user.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends NegotiationFindUniqueOrThrowArgs>(args: SelectSubset<T, NegotiationFindUniqueOrThrowArgs<ExtArgs>>): Prisma__NegotiationClient<$Result.GetResult<Prisma.$NegotiationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends UserFindUniqueOrThrowArgs>(args: SelectSubset<T, UserFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Negotiation that matches the filter.
+     * Find the first User that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {NegotiationFindFirstArgs} args - Arguments to find a Negotiation
+     * @param {UserFindFirstArgs} args - Arguments to find a User
      * @example
-     * // Get one Negotiation
-     * const negotiation = await prisma.negotiation.findFirst({
+     * // Get one User
+     * const user = await prisma.user.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends NegotiationFindFirstArgs>(args?: SelectSubset<T, NegotiationFindFirstArgs<ExtArgs>>): Prisma__NegotiationClient<$Result.GetResult<Prisma.$NegotiationPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends UserFindFirstArgs>(args?: SelectSubset<T, UserFindFirstArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Negotiation that matches the filter or
+     * Find the first User that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {NegotiationFindFirstOrThrowArgs} args - Arguments to find a Negotiation
+     * @param {UserFindFirstOrThrowArgs} args - Arguments to find a User
      * @example
-     * // Get one Negotiation
-     * const negotiation = await prisma.negotiation.findFirstOrThrow({
+     * // Get one User
+     * const user = await prisma.user.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends NegotiationFindFirstOrThrowArgs>(args?: SelectSubset<T, NegotiationFindFirstOrThrowArgs<ExtArgs>>): Prisma__NegotiationClient<$Result.GetResult<Prisma.$NegotiationPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends UserFindFirstOrThrowArgs>(args?: SelectSubset<T, UserFindFirstOrThrowArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Negotiations that matches the filter.
+     * Find zero or more Users that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {NegotiationFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {UserFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Negotiations
-     * const negotiations = await prisma.negotiation.findMany()
+     * // Get all Users
+     * const users = await prisma.user.findMany()
      * 
-     * // Get first 10 Negotiations
-     * const negotiations = await prisma.negotiation.findMany({ take: 10 })
+     * // Get first 10 Users
+     * const users = await prisma.user.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const negotiationWithIdOnly = await prisma.negotiation.findMany({ select: { id: true } })
+     * const userWithIdOnly = await prisma.user.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends NegotiationFindManyArgs>(args?: SelectSubset<T, NegotiationFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NegotiationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends UserFindManyArgs>(args?: SelectSubset<T, UserFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Negotiation.
-     * @param {NegotiationCreateArgs} args - Arguments to create a Negotiation.
+     * Create a User.
+     * @param {UserCreateArgs} args - Arguments to create a User.
      * @example
-     * // Create one Negotiation
-     * const Negotiation = await prisma.negotiation.create({
+     * // Create one User
+     * const User = await prisma.user.create({
      *   data: {
-     *     // ... data to create a Negotiation
+     *     // ... data to create a User
      *   }
      * })
      * 
      */
-    create<T extends NegotiationCreateArgs>(args: SelectSubset<T, NegotiationCreateArgs<ExtArgs>>): Prisma__NegotiationClient<$Result.GetResult<Prisma.$NegotiationPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends UserCreateArgs>(args: SelectSubset<T, UserCreateArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Negotiations.
-     * @param {NegotiationCreateManyArgs} args - Arguments to create many Negotiations.
+     * Create many Users.
+     * @param {UserCreateManyArgs} args - Arguments to create many Users.
      * @example
-     * // Create many Negotiations
-     * const negotiation = await prisma.negotiation.createMany({
+     * // Create many Users
+     * const user = await prisma.user.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends NegotiationCreateManyArgs>(args?: SelectSubset<T, NegotiationCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends UserCreateManyArgs>(args?: SelectSubset<T, UserCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Negotiations and returns the data saved in the database.
-     * @param {NegotiationCreateManyAndReturnArgs} args - Arguments to create many Negotiations.
+     * Create many Users and returns the data saved in the database.
+     * @param {UserCreateManyAndReturnArgs} args - Arguments to create many Users.
      * @example
-     * // Create many Negotiations
-     * const negotiation = await prisma.negotiation.createManyAndReturn({
+     * // Create many Users
+     * const user = await prisma.user.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Negotiations and only return the `id`
-     * const negotiationWithIdOnly = await prisma.negotiation.createManyAndReturn({
+     * // Create many Users and only return the `id`
+     * const userWithIdOnly = await prisma.user.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -1221,28 +1221,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends NegotiationCreateManyAndReturnArgs>(args?: SelectSubset<T, NegotiationCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NegotiationPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends UserCreateManyAndReturnArgs>(args?: SelectSubset<T, UserCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Negotiation.
-     * @param {NegotiationDeleteArgs} args - Arguments to delete one Negotiation.
+     * Delete a User.
+     * @param {UserDeleteArgs} args - Arguments to delete one User.
      * @example
-     * // Delete one Negotiation
-     * const Negotiation = await prisma.negotiation.delete({
+     * // Delete one User
+     * const User = await prisma.user.delete({
      *   where: {
-     *     // ... filter to delete one Negotiation
+     *     // ... filter to delete one User
      *   }
      * })
      * 
      */
-    delete<T extends NegotiationDeleteArgs>(args: SelectSubset<T, NegotiationDeleteArgs<ExtArgs>>): Prisma__NegotiationClient<$Result.GetResult<Prisma.$NegotiationPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends UserDeleteArgs>(args: SelectSubset<T, UserDeleteArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Negotiation.
-     * @param {NegotiationUpdateArgs} args - Arguments to update one Negotiation.
+     * Update one User.
+     * @param {UserUpdateArgs} args - Arguments to update one User.
      * @example
-     * // Update one Negotiation
-     * const negotiation = await prisma.negotiation.update({
+     * // Update one User
+     * const user = await prisma.user.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1252,30 +1252,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends NegotiationUpdateArgs>(args: SelectSubset<T, NegotiationUpdateArgs<ExtArgs>>): Prisma__NegotiationClient<$Result.GetResult<Prisma.$NegotiationPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends UserUpdateArgs>(args: SelectSubset<T, UserUpdateArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Negotiations.
-     * @param {NegotiationDeleteManyArgs} args - Arguments to filter Negotiations to delete.
+     * Delete zero or more Users.
+     * @param {UserDeleteManyArgs} args - Arguments to filter Users to delete.
      * @example
-     * // Delete a few Negotiations
-     * const { count } = await prisma.negotiation.deleteMany({
+     * // Delete a few Users
+     * const { count } = await prisma.user.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends NegotiationDeleteManyArgs>(args?: SelectSubset<T, NegotiationDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends UserDeleteManyArgs>(args?: SelectSubset<T, UserDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Negotiations.
+     * Update zero or more Users.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {NegotiationUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {UserUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Negotiations
-     * const negotiation = await prisma.negotiation.updateMany({
+     * // Update many Users
+     * const user = await prisma.user.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1285,14 +1285,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends NegotiationUpdateManyArgs>(args: SelectSubset<T, NegotiationUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends UserUpdateManyArgs>(args: SelectSubset<T, UserUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Negotiations and returns the data updated in the database.
-     * @param {NegotiationUpdateManyAndReturnArgs} args - Arguments to update many Negotiations.
+     * Update zero or more Users and returns the data updated in the database.
+     * @param {UserUpdateManyAndReturnArgs} args - Arguments to update many Users.
      * @example
-     * // Update many Negotiations
-     * const negotiation = await prisma.negotiation.updateManyAndReturn({
+     * // Update many Users
+     * const user = await prisma.user.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1301,8 +1301,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Negotiations and only return the `id`
-     * const negotiationWithIdOnly = await prisma.negotiation.updateManyAndReturn({
+     * // Update zero or more Users and only return the `id`
+     * const userWithIdOnly = await prisma.user.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -1315,56 +1315,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends NegotiationUpdateManyAndReturnArgs>(args: SelectSubset<T, NegotiationUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NegotiationPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends UserUpdateManyAndReturnArgs>(args: SelectSubset<T, UserUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Negotiation.
-     * @param {NegotiationUpsertArgs} args - Arguments to update or create a Negotiation.
+     * Create or update one User.
+     * @param {UserUpsertArgs} args - Arguments to update or create a User.
      * @example
-     * // Update or create a Negotiation
-     * const negotiation = await prisma.negotiation.upsert({
+     * // Update or create a User
+     * const user = await prisma.user.upsert({
      *   create: {
-     *     // ... data to create a Negotiation
+     *     // ... data to create a User
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Negotiation we want to update
+     *     // ... the filter for the User we want to update
      *   }
      * })
      */
-    upsert<T extends NegotiationUpsertArgs>(args: SelectSubset<T, NegotiationUpsertArgs<ExtArgs>>): Prisma__NegotiationClient<$Result.GetResult<Prisma.$NegotiationPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends UserUpsertArgs>(args: SelectSubset<T, UserUpsertArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Negotiations.
+     * Count the number of Users.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {NegotiationCountArgs} args - Arguments to filter Negotiations to count.
+     * @param {UserCountArgs} args - Arguments to filter Users to count.
      * @example
-     * // Count the number of Negotiations
-     * const count = await prisma.negotiation.count({
+     * // Count the number of Users
+     * const count = await prisma.user.count({
      *   where: {
-     *     // ... the filter for the Negotiations we want to count
+     *     // ... the filter for the Users we want to count
      *   }
      * })
     **/
-    count<T extends NegotiationCountArgs>(
-      args?: Subset<T, NegotiationCountArgs>,
+    count<T extends UserCountArgs>(
+      args?: Subset<T, UserCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], NegotiationCountAggregateOutputType>
+          : GetScalarType<T['select'], UserCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Negotiation.
+     * Allows you to perform aggregations operations on a User.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {NegotiationAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {UserAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1384,13 +1384,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends NegotiationAggregateArgs>(args: Subset<T, NegotiationAggregateArgs>): Prisma.PrismaPromise<GetNegotiationAggregateType<T>>
+    aggregate<T extends UserAggregateArgs>(args: Subset<T, UserAggregateArgs>): Prisma.PrismaPromise<GetUserAggregateType<T>>
 
     /**
-     * Group by Negotiation.
+     * Group by User.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {NegotiationGroupByArgs} args - Group by arguments.
+     * @param {UserGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1405,14 +1405,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends NegotiationGroupByArgs,
+      T extends UserGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: NegotiationGroupByArgs['orderBy'] }
-        : { orderBy?: NegotiationGroupByArgs['orderBy'] },
+        ? { orderBy: UserGroupByArgs['orderBy'] }
+        : { orderBy?: UserGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1461,20 +1461,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, NegotiationGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetNegotiationGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, UserGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Negotiation model
+   * Fields of the User model
    */
-  readonly fields: NegotiationFieldRefs;
+  readonly fields: UserFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Negotiation.
+   * The delegate class that acts as a "Promise-like" for User.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__NegotiationClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__UserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1502,378 +1502,378 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Negotiation model
+   * Fields of the User model
    */
-  interface NegotiationFieldRefs {
-    readonly id: FieldRef<"Negotiation", 'String'>
-    readonly userId: FieldRef<"Negotiation", 'String'>
-    readonly originalText: FieldRef<"Negotiation", 'String'>
-    readonly counterOffer: FieldRef<"Negotiation", 'String'>
-    readonly toneTips: FieldRef<"Negotiation", 'String'>
-    readonly createdAt: FieldRef<"Negotiation", 'DateTime'>
+  interface UserFieldRefs {
+    readonly id: FieldRef<"User", 'String'>
+    readonly clerkId: FieldRef<"User", 'String'>
+    readonly email: FieldRef<"User", 'String'>
+    readonly name: FieldRef<"User", 'String'>
+    readonly createdAt: FieldRef<"User", 'DateTime'>
+    readonly updatedAt: FieldRef<"User", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * Negotiation findUnique
+   * User findUnique
    */
-  export type NegotiationFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Negotiation
+     * Select specific fields to fetch from the User
      */
-    select?: NegotiationSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Negotiation
+     * Omit specific fields from the User
      */
-    omit?: NegotiationOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter, which Negotiation to fetch.
+     * Filter, which User to fetch.
      */
-    where: NegotiationWhereUniqueInput
+    where: UserWhereUniqueInput
   }
 
   /**
-   * Negotiation findUniqueOrThrow
+   * User findUniqueOrThrow
    */
-  export type NegotiationFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Negotiation
+     * Select specific fields to fetch from the User
      */
-    select?: NegotiationSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Negotiation
+     * Omit specific fields from the User
      */
-    omit?: NegotiationOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter, which Negotiation to fetch.
+     * Filter, which User to fetch.
      */
-    where: NegotiationWhereUniqueInput
+    where: UserWhereUniqueInput
   }
 
   /**
-   * Negotiation findFirst
+   * User findFirst
    */
-  export type NegotiationFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Negotiation
+     * Select specific fields to fetch from the User
      */
-    select?: NegotiationSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Negotiation
+     * Omit specific fields from the User
      */
-    omit?: NegotiationOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter, which Negotiation to fetch.
+     * Filter, which User to fetch.
      */
-    where?: NegotiationWhereInput
+    where?: UserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Negotiations to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: NegotiationOrderByWithRelationInput | NegotiationOrderByWithRelationInput[]
+    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Negotiations.
+     * Sets the position for searching for Users.
      */
-    cursor?: NegotiationWhereUniqueInput
+    cursor?: UserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Negotiations from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Negotiations.
+     * Skip the first `n` Users.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Negotiations.
+     * Filter by unique combinations of Users.
      */
-    distinct?: NegotiationScalarFieldEnum | NegotiationScalarFieldEnum[]
+    distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
   }
 
   /**
-   * Negotiation findFirstOrThrow
+   * User findFirstOrThrow
    */
-  export type NegotiationFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Negotiation
+     * Select specific fields to fetch from the User
      */
-    select?: NegotiationSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Negotiation
+     * Omit specific fields from the User
      */
-    omit?: NegotiationOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter, which Negotiation to fetch.
+     * Filter, which User to fetch.
      */
-    where?: NegotiationWhereInput
+    where?: UserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Negotiations to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: NegotiationOrderByWithRelationInput | NegotiationOrderByWithRelationInput[]
+    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Negotiations.
+     * Sets the position for searching for Users.
      */
-    cursor?: NegotiationWhereUniqueInput
+    cursor?: UserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Negotiations from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Negotiations.
+     * Skip the first `n` Users.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Negotiations.
+     * Filter by unique combinations of Users.
      */
-    distinct?: NegotiationScalarFieldEnum | NegotiationScalarFieldEnum[]
+    distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
   }
 
   /**
-   * Negotiation findMany
+   * User findMany
    */
-  export type NegotiationFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Negotiation
+     * Select specific fields to fetch from the User
      */
-    select?: NegotiationSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Negotiation
+     * Omit specific fields from the User
      */
-    omit?: NegotiationOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter, which Negotiations to fetch.
+     * Filter, which Users to fetch.
      */
-    where?: NegotiationWhereInput
+    where?: UserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Negotiations to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: NegotiationOrderByWithRelationInput | NegotiationOrderByWithRelationInput[]
+    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Negotiations.
+     * Sets the position for listing Users.
      */
-    cursor?: NegotiationWhereUniqueInput
+    cursor?: UserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Negotiations from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Negotiations.
+     * Skip the first `n` Users.
      */
     skip?: number
-    distinct?: NegotiationScalarFieldEnum | NegotiationScalarFieldEnum[]
+    distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
   }
 
   /**
-   * Negotiation create
+   * User create
    */
-  export type NegotiationCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Negotiation
+     * Select specific fields to fetch from the User
      */
-    select?: NegotiationSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Negotiation
+     * Omit specific fields from the User
      */
-    omit?: NegotiationOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * The data needed to create a Negotiation.
+     * The data needed to create a User.
      */
-    data: XOR<NegotiationCreateInput, NegotiationUncheckedCreateInput>
+    data: XOR<UserCreateInput, UserUncheckedCreateInput>
   }
 
   /**
-   * Negotiation createMany
+   * User createMany
    */
-  export type NegotiationCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Negotiations.
+     * The data used to create many Users.
      */
-    data: NegotiationCreateManyInput | NegotiationCreateManyInput[]
+    data: UserCreateManyInput | UserCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Negotiation createManyAndReturn
+   * User createManyAndReturn
    */
-  export type NegotiationCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Negotiation
+     * Select specific fields to fetch from the User
      */
-    select?: NegotiationSelectCreateManyAndReturn<ExtArgs> | null
+    select?: UserSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Negotiation
+     * Omit specific fields from the User
      */
-    omit?: NegotiationOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * The data used to create many Negotiations.
+     * The data used to create many Users.
      */
-    data: NegotiationCreateManyInput | NegotiationCreateManyInput[]
+    data: UserCreateManyInput | UserCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Negotiation update
+   * User update
    */
-  export type NegotiationUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Negotiation
+     * Select specific fields to fetch from the User
      */
-    select?: NegotiationSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Negotiation
+     * Omit specific fields from the User
      */
-    omit?: NegotiationOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * The data needed to update a Negotiation.
+     * The data needed to update a User.
      */
-    data: XOR<NegotiationUpdateInput, NegotiationUncheckedUpdateInput>
+    data: XOR<UserUpdateInput, UserUncheckedUpdateInput>
     /**
-     * Choose, which Negotiation to update.
+     * Choose, which User to update.
      */
-    where: NegotiationWhereUniqueInput
+    where: UserWhereUniqueInput
   }
 
   /**
-   * Negotiation updateMany
+   * User updateMany
    */
-  export type NegotiationUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Negotiations.
+     * The data used to update Users.
      */
-    data: XOR<NegotiationUpdateManyMutationInput, NegotiationUncheckedUpdateManyInput>
+    data: XOR<UserUpdateManyMutationInput, UserUncheckedUpdateManyInput>
     /**
-     * Filter which Negotiations to update
+     * Filter which Users to update
      */
-    where?: NegotiationWhereInput
+    where?: UserWhereInput
     /**
-     * Limit how many Negotiations to update.
+     * Limit how many Users to update.
      */
     limit?: number
   }
 
   /**
-   * Negotiation updateManyAndReturn
+   * User updateManyAndReturn
    */
-  export type NegotiationUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Negotiation
+     * Select specific fields to fetch from the User
      */
-    select?: NegotiationSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: UserSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Negotiation
+     * Omit specific fields from the User
      */
-    omit?: NegotiationOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * The data used to update Negotiations.
+     * The data used to update Users.
      */
-    data: XOR<NegotiationUpdateManyMutationInput, NegotiationUncheckedUpdateManyInput>
+    data: XOR<UserUpdateManyMutationInput, UserUncheckedUpdateManyInput>
     /**
-     * Filter which Negotiations to update
+     * Filter which Users to update
      */
-    where?: NegotiationWhereInput
+    where?: UserWhereInput
     /**
-     * Limit how many Negotiations to update.
+     * Limit how many Users to update.
      */
     limit?: number
   }
 
   /**
-   * Negotiation upsert
+   * User upsert
    */
-  export type NegotiationUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Negotiation
+     * Select specific fields to fetch from the User
      */
-    select?: NegotiationSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Negotiation
+     * Omit specific fields from the User
      */
-    omit?: NegotiationOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * The filter to search for the Negotiation to update in case it exists.
+     * The filter to search for the User to update in case it exists.
      */
-    where: NegotiationWhereUniqueInput
+    where: UserWhereUniqueInput
     /**
-     * In case the Negotiation found by the `where` argument doesn't exist, create a new Negotiation with this data.
+     * In case the User found by the `where` argument doesn't exist, create a new User with this data.
      */
-    create: XOR<NegotiationCreateInput, NegotiationUncheckedCreateInput>
+    create: XOR<UserCreateInput, UserUncheckedCreateInput>
     /**
-     * In case the Negotiation was found with the provided `where` argument, update it with this data.
+     * In case the User was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<NegotiationUpdateInput, NegotiationUncheckedUpdateInput>
+    update: XOR<UserUpdateInput, UserUncheckedUpdateInput>
   }
 
   /**
-   * Negotiation delete
+   * User delete
    */
-  export type NegotiationDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Negotiation
+     * Select specific fields to fetch from the User
      */
-    select?: NegotiationSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Negotiation
+     * Omit specific fields from the User
      */
-    omit?: NegotiationOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter which Negotiation to delete.
+     * Filter which User to delete.
      */
-    where: NegotiationWhereUniqueInput
+    where: UserWhereUniqueInput
   }
 
   /**
-   * Negotiation deleteMany
+   * User deleteMany
    */
-  export type NegotiationDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Negotiations to delete
+     * Filter which Users to delete
      */
-    where?: NegotiationWhereInput
+    where?: UserWhereInput
     /**
-     * Limit how many Negotiations to delete.
+     * Limit how many Users to delete.
      */
     limit?: number
   }
 
   /**
-   * Negotiation without action
+   * User without action
    */
-  export type NegotiationDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Negotiation
+     * Select specific fields to fetch from the User
      */
-    select?: NegotiationSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Negotiation
+     * Omit specific fields from the User
      */
-    omit?: NegotiationOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
   }
 
 
@@ -1891,16 +1891,16 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const NegotiationScalarFieldEnum: {
+  export const UserScalarFieldEnum: {
     id: 'id',
-    userId: 'userId',
-    originalText: 'originalText',
-    counterOffer: 'counterOffer',
-    toneTips: 'toneTips',
-    createdAt: 'createdAt'
+    clerkId: 'clerkId',
+    email: 'email',
+    name: 'name',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
   };
 
-  export type NegotiationScalarFieldEnum = (typeof NegotiationScalarFieldEnum)[keyof typeof NegotiationScalarFieldEnum]
+  export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -1917,6 +1917,14 @@ export namespace Prisma {
   };
 
   export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+
+
+  export const NullsOrder: {
+    first: 'first',
+    last: 'last'
+  };
+
+  export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 
 
   /**
@@ -1969,124 +1977,124 @@ export namespace Prisma {
    */
 
 
-  export type NegotiationWhereInput = {
-    AND?: NegotiationWhereInput | NegotiationWhereInput[]
-    OR?: NegotiationWhereInput[]
-    NOT?: NegotiationWhereInput | NegotiationWhereInput[]
-    id?: StringFilter<"Negotiation"> | string
-    userId?: StringFilter<"Negotiation"> | string
-    originalText?: StringFilter<"Negotiation"> | string
-    counterOffer?: StringFilter<"Negotiation"> | string
-    toneTips?: StringFilter<"Negotiation"> | string
-    createdAt?: DateTimeFilter<"Negotiation"> | Date | string
+  export type UserWhereInput = {
+    AND?: UserWhereInput | UserWhereInput[]
+    OR?: UserWhereInput[]
+    NOT?: UserWhereInput | UserWhereInput[]
+    id?: StringFilter<"User"> | string
+    clerkId?: StringFilter<"User"> | string
+    email?: StringFilter<"User"> | string
+    name?: StringNullableFilter<"User"> | string | null
+    createdAt?: DateTimeFilter<"User"> | Date | string
+    updatedAt?: DateTimeFilter<"User"> | Date | string
   }
 
-  export type NegotiationOrderByWithRelationInput = {
+  export type UserOrderByWithRelationInput = {
     id?: SortOrder
-    userId?: SortOrder
-    originalText?: SortOrder
-    counterOffer?: SortOrder
-    toneTips?: SortOrder
+    clerkId?: SortOrder
+    email?: SortOrder
+    name?: SortOrderInput | SortOrder
     createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
-  export type NegotiationWhereUniqueInput = Prisma.AtLeast<{
+  export type UserWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    AND?: NegotiationWhereInput | NegotiationWhereInput[]
-    OR?: NegotiationWhereInput[]
-    NOT?: NegotiationWhereInput | NegotiationWhereInput[]
-    userId?: StringFilter<"Negotiation"> | string
-    originalText?: StringFilter<"Negotiation"> | string
-    counterOffer?: StringFilter<"Negotiation"> | string
-    toneTips?: StringFilter<"Negotiation"> | string
-    createdAt?: DateTimeFilter<"Negotiation"> | Date | string
-  }, "id">
+    clerkId?: string
+    email?: string
+    AND?: UserWhereInput | UserWhereInput[]
+    OR?: UserWhereInput[]
+    NOT?: UserWhereInput | UserWhereInput[]
+    name?: StringNullableFilter<"User"> | string | null
+    createdAt?: DateTimeFilter<"User"> | Date | string
+    updatedAt?: DateTimeFilter<"User"> | Date | string
+  }, "id" | "clerkId" | "email">
 
-  export type NegotiationOrderByWithAggregationInput = {
+  export type UserOrderByWithAggregationInput = {
     id?: SortOrder
-    userId?: SortOrder
-    originalText?: SortOrder
-    counterOffer?: SortOrder
-    toneTips?: SortOrder
+    clerkId?: SortOrder
+    email?: SortOrder
+    name?: SortOrderInput | SortOrder
     createdAt?: SortOrder
-    _count?: NegotiationCountOrderByAggregateInput
-    _max?: NegotiationMaxOrderByAggregateInput
-    _min?: NegotiationMinOrderByAggregateInput
+    updatedAt?: SortOrder
+    _count?: UserCountOrderByAggregateInput
+    _max?: UserMaxOrderByAggregateInput
+    _min?: UserMinOrderByAggregateInput
   }
 
-  export type NegotiationScalarWhereWithAggregatesInput = {
-    AND?: NegotiationScalarWhereWithAggregatesInput | NegotiationScalarWhereWithAggregatesInput[]
-    OR?: NegotiationScalarWhereWithAggregatesInput[]
-    NOT?: NegotiationScalarWhereWithAggregatesInput | NegotiationScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Negotiation"> | string
-    userId?: StringWithAggregatesFilter<"Negotiation"> | string
-    originalText?: StringWithAggregatesFilter<"Negotiation"> | string
-    counterOffer?: StringWithAggregatesFilter<"Negotiation"> | string
-    toneTips?: StringWithAggregatesFilter<"Negotiation"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"Negotiation"> | Date | string
+  export type UserScalarWhereWithAggregatesInput = {
+    AND?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
+    OR?: UserScalarWhereWithAggregatesInput[]
+    NOT?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"User"> | string
+    clerkId?: StringWithAggregatesFilter<"User"> | string
+    email?: StringWithAggregatesFilter<"User"> | string
+    name?: StringNullableWithAggregatesFilter<"User"> | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
 
-  export type NegotiationCreateInput = {
+  export type UserCreateInput = {
     id?: string
-    userId: string
-    originalText: string
-    counterOffer: string
-    toneTips: string
+    clerkId: string
+    email: string
+    name?: string | null
     createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
-  export type NegotiationUncheckedCreateInput = {
+  export type UserUncheckedCreateInput = {
     id?: string
-    userId: string
-    originalText: string
-    counterOffer: string
-    toneTips: string
+    clerkId: string
+    email: string
+    name?: string | null
     createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
-  export type NegotiationUpdateInput = {
+  export type UserUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    userId?: StringFieldUpdateOperationsInput | string
-    originalText?: StringFieldUpdateOperationsInput | string
-    counterOffer?: StringFieldUpdateOperationsInput | string
-    toneTips?: StringFieldUpdateOperationsInput | string
+    clerkId?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type NegotiationUncheckedUpdateInput = {
+  export type UserUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    userId?: StringFieldUpdateOperationsInput | string
-    originalText?: StringFieldUpdateOperationsInput | string
-    counterOffer?: StringFieldUpdateOperationsInput | string
-    toneTips?: StringFieldUpdateOperationsInput | string
+    clerkId?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type NegotiationCreateManyInput = {
+  export type UserCreateManyInput = {
     id?: string
-    userId: string
-    originalText: string
-    counterOffer: string
-    toneTips: string
+    clerkId: string
+    email: string
+    name?: string | null
     createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
-  export type NegotiationUpdateManyMutationInput = {
+  export type UserUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    userId?: StringFieldUpdateOperationsInput | string
-    originalText?: StringFieldUpdateOperationsInput | string
-    counterOffer?: StringFieldUpdateOperationsInput | string
-    toneTips?: StringFieldUpdateOperationsInput | string
+    clerkId?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type NegotiationUncheckedUpdateManyInput = {
+  export type UserUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
-    userId?: StringFieldUpdateOperationsInput | string
-    originalText?: StringFieldUpdateOperationsInput | string
-    counterOffer?: StringFieldUpdateOperationsInput | string
-    toneTips?: StringFieldUpdateOperationsInput | string
+    clerkId?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type StringFilter<$PrismaModel = never> = {
@@ -2104,6 +2112,21 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
+  export type StringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
   export type DateTimeFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -2115,31 +2138,36 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type NegotiationCountOrderByAggregateInput = {
-    id?: SortOrder
-    userId?: SortOrder
-    originalText?: SortOrder
-    counterOffer?: SortOrder
-    toneTips?: SortOrder
-    createdAt?: SortOrder
+  export type SortOrderInput = {
+    sort: SortOrder
+    nulls?: NullsOrder
   }
 
-  export type NegotiationMaxOrderByAggregateInput = {
+  export type UserCountOrderByAggregateInput = {
     id?: SortOrder
-    userId?: SortOrder
-    originalText?: SortOrder
-    counterOffer?: SortOrder
-    toneTips?: SortOrder
+    clerkId?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
     createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
-  export type NegotiationMinOrderByAggregateInput = {
+  export type UserMaxOrderByAggregateInput = {
     id?: SortOrder
-    userId?: SortOrder
-    originalText?: SortOrder
-    counterOffer?: SortOrder
-    toneTips?: SortOrder
+    clerkId?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
     createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type UserMinOrderByAggregateInput = {
+    id?: SortOrder
+    clerkId?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type StringWithAggregatesFilter<$PrismaModel = never> = {
@@ -2160,6 +2188,24 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
+  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
   export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -2178,6 +2224,10 @@ export namespace Prisma {
     set?: string
   }
 
+  export type NullableStringFieldUpdateOperationsInput = {
+    set?: string | null
+  }
+
   export type DateTimeFieldUpdateOperationsInput = {
     set?: Date | string
   }
@@ -2194,6 +2244,20 @@ export namespace Prisma {
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
     not?: NestedStringFilter<$PrismaModel> | string
+  }
+
+  export type NestedStringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
   export type NestedDateTimeFilter<$PrismaModel = never> = {
@@ -2233,6 +2297,34 @@ export namespace Prisma {
     gt?: number | IntFieldRefInput<$PrismaModel>
     gte?: number | IntFieldRefInput<$PrismaModel>
     not?: NestedIntFilter<$PrismaModel> | number
+  }
+
+  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type NestedIntNullableFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
   export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
